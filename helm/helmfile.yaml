@@ -9,6 +9,8 @@ repositories:
     url: https://kubernetes.github.io/ingress-nginx
   - name: bitnami
     url: https://charts.bitnami.com/bitnami
+#  - name: dashboard
+#    url: https://kubernetes.github.io/dashboard/
 ---
 releases:
   # Distributed storage
@@ -46,3 +48,9 @@ releases:
     version: 8.0.1
     values:
       - ./values/externaldns.values.yaml
+
+  # Kubernetes Dashboard
+  - name: dashboard
+    namespace: ??
+    chart: kubernetes-dashboard/kubernetes-dashboard
+    version: ??
